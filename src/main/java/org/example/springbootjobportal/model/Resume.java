@@ -23,5 +23,5 @@ public class Resume {
 
     private String resume_url;
 
-    private LocalDateTime created_at    ;
+    private LocalDateTime created_at;
 }
