@@ -5,6 +5,7 @@ import org.example.springbootjobportal.dao.UserDao;
 import org.example.springbootjobportal.model.Users;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -18,9 +19,11 @@ public class UserService {
 
 
     public Users save(Users users) {
+        users.setCreated_at(LocalDateTime.now());
         return userDao.save(users);
     }
     public Users update(Users users) {
+        users.setUpdated_at(LocalDateTime.now());
         return userDao.save(users);
     }
 

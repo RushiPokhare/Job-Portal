@@ -5,6 +5,7 @@ import org.example.springbootjobportal.model.App;
 import org.example.springbootjobportal.service.AppService;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -15,6 +16,7 @@ public class AppController {
 
     @PostMapping
     public App saveApp(@RequestBody App app) {
+        app.setApplied_at(LocalDateTime.now());
         return appService.save(app);
     }
 
