@@ -1,5 +1,6 @@
 package org.example.springbootjobportal.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,6 +19,7 @@ public class Resume {
     private int resume_id;
 
     @OneToOne
+    @JsonBackReference
     @JoinColumn(name = "user_id")
     private Users user_id;
 

@@ -1,5 +1,6 @@
 package org.example.springbootjobportal.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,5 +27,6 @@ public class Users {
     private LocalDateTime updated_at;
 
     @OneToMany(mappedBy = "posted_by",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Job> jobsPosted;
 }

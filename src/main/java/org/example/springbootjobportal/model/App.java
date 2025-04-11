@@ -1,5 +1,6 @@
 package org.example.springbootjobportal.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class App {
 
     @ManyToOne
     @JoinColumn(name = "job_id")
+    @JsonBackReference
     private Job job_id;
 
     @ManyToOne
