@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173/")
+@CrossOrigin(origins = "http://localhost:5173/")  //--> Used for the CORS Error we give the frontend url here
 @RequestMapping("/auth")
 @AllArgsConstructor
 public class UserController {
