@@ -14,12 +14,12 @@ import lombok.*;
 public class Interview {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int interview_id;
+    private int interviewId;
 
     @OneToOne
     @JoinColumn(name = "application_id")
     @JsonBackReference
-    private App application_id;
+    private App applicationId;
 
     private String scheduled_time;
 

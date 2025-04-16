@@ -20,22 +20,22 @@ public class InterviewController {
     }
 
     @PostMapping
-    public Interview saveInterview(Interview interview) {
+    public Interview saveInterview(@RequestBody Interview interview) {
         return interviewService.SaveInterview(interview);
     }
 
     @PutMapping
-    public Interview updateInterview(Interview interview) {
+    public Interview updateInterview(@RequestBody Interview interview) {
         return interviewService.updateInterview(interview);
     }
 
     @GetMapping("/{id}")
-    public Interview getInterviewById(int id) {
+    public Interview getInterviewById(@PathVariable int id) {
         return interviewService.findInterviewById(id);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteInterviewById(int id) {
+    public void deleteInterviewById(@PathVariable int id) {
         interviewService.deleteInterview(id);
     }
 

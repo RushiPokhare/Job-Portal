@@ -25,7 +25,7 @@ public class InterviewService {
     }
 
     public Interview findInterviewById(int id) {
-        return interviewDao.getById(id);
+        return interviewDao.findById(id).get();
     }
 
     public void deleteInterview(int id) {

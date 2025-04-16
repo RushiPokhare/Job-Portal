@@ -16,16 +16,16 @@ import java.time.LocalDateTime;
 public class App {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int application_id;
+    private int applicationId;
 
     @ManyToOne
     @JoinColumn(name = "job_id")
     @JsonBackReference
-    private Job job_id;
+    private Job jobId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users user_id;
+    private Users userId;
 
     @Enumerated(EnumType.STRING)
     private AppStatus status;

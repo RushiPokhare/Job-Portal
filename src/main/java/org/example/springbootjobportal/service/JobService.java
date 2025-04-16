@@ -25,7 +25,7 @@ public class JobService {
         return jobDao.findAll();
     }
     public Job getById(int id) {
-        return jobDao.getById(id);
+        return jobDao.findById(id).get();
     }
 
     public void deleteById(int id) {

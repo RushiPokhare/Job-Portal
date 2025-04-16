@@ -25,7 +25,7 @@ public class AppService {
     }
 
     public App getAppById(int id) {
-        return appDao.getById(id);   // if not work used findById(id).get();
+        return appDao.findById(id).get();   // if not work used findById(id).get();
     }
 
     public void deleteById(int id) {

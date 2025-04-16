@@ -16,12 +16,12 @@ import java.time.LocalDateTime;
 public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int resume_id;
+    private int resumeId;
 
     @OneToOne
     @JsonBackReference
     @JoinColumn(name = "user_id")
-    private Users user_id;
+    private Users userId;
 
     private String resume_url;
 
